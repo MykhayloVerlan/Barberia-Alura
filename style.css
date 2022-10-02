@@ -1,0 +1,466 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: darkgrey;
+    width: 100%;
+    padding: 20px 0;/*20 de margen para sup e inf, y 0 para laterales */
+}
+
+.caja{
+    width: 940px;/*le dimos posicion estatica a nuestro header, el bloque del logo y al bloque de las nav q son 3 li*/
+    position: relative;/*relativa a la posicion absoluta q definimos antes*/
+    margin: 0 auto;/*un margen 0 tanto en el sup e inf, y automatico a la izq y der, xq en funcion de la resolucion q me toque se ajustara automaticamente a la pantalla*/
+
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0%;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;/*de minuscula a mayuscula */
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;/*saca el subrayado del enlace */
+}
+
+nav a:hover{
+    color:darkgoldenrod;
+    text-decoration: underline;
+}
+
+.contenido-productos{
+    padding: 25px 0;
+}
+
+.productos{
+    width: 940px;
+    margin: 2em auto;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;/*0 en verticual 1.5 en laterales */
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: black;
+    border-width: 3px;
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: darkgoldenrod;
+}
+
+.productos li:active{
+    border-color: darkblue;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background-image: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+
+.color-contacto{
+    background: linear-gradient(white,lightgrey)
+}
+
+.contenido-contacto{
+    width: 940px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+/* main{
+    width: 940px;
+    margin: 0 auto;
+}  */
+
+form label{
+    display: block;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+
+.input-padron{
+    display: block;
+    margin: 0px 0 20px 0;
+    padding: 5px 50px 5px 30px;
+    width: 50%;
+}
+
+form legend{
+    display: block;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+
+.preferencia{
+    padding: 20px 0 0 0;
+}
+
+.checkbox{
+    margin: 25px 0 10px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background-color: orangered;
+    transform: scale(1.1);
+}
+
+table{
+    margin: 25px 0 0 0;
+}
+
+thead{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background: grey;
+    border-color: black;
+    border-width: 1px;
+    border-style: groove;
+}
+
+tbody tr td{
+    padding: 2px 25px;
+    font-size: 18px;
+    background: lightgrey;
+    border-color: black;
+    border-width: 1px;
+    border-style: groove;
+}
+
+/*Aqui inicia el CSS para nuestra home - index2 
+
+Para crear el estilo de nuestro contenido, el padron a usar debe ser especifico y generico.*/
+
+.banner{
+    width: 100%;
+}
+
+/*display:block viene por defecto un texto y ocupa toda la linea en horizontal. pero si ponemos display:inline me cambiara a un bloque que ocupa el parrafo hasta donde termina.
+
+main > P{
+    background-color: red;
+}
+o
+main P:nth-child(1){
+    display: inline;
+    background-color: RED;
+}
+me pone de color rojo el primer parrafo de <p>
+
+img + P{
+|   background-color: yellow;
+} 
+me pone en amarillo todo el parrafo que viene despues de una imagen.
+
+img ~ P{
+    background-color: orange;
+}
+me pone color naranja a todos los parrafos despues de la foto.
+
+main P:nth-child(3){
+    display: inline;
+    background-color: green;
+}
+o
+.principal p:not(#mision){
+    background-color: aqua;
+}
+pone color a todo menos al parrafo 2.
+*/
+
+.principal{
+    background-color: white;
+    padding: 25px 0;
+    margin: 1em 0 0 0;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    /*por defecto el tamaño de letra viene en 15px, si decimos 2em, significa 2 x 15px, osea 30px.*/
+    margin: 0 0 1em;
+    clear: left;
+    /*con text-shadow 
+    text-shadow: 1px 1px 1px;ponemos sombra a las letras  o textos tmb.
+    para ver como funciona ir aqui.
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator */   
+}
+
+/*con este seudoelemento podemos hacer q la primera letra de este class sea bold por ejemplo.
+.titulo-principal:first-letter{
+    font-weight:lighter;
+}
+otro ejemplo para agregar en parrafos es asi.
+p:first-line{
+    font-style: italic;
+}*/
+
+.principal-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.utensiliosjpg{
+    /* esta formula hace un tercio del elemento jpg, y le restamos
+    width: calc((100%/3)-10px);*/
+    width: 17%;
+    padding: 0 15px 0 0;
+    float: left; /*esta propiedad me deja el texto que tenia abajo hacia arriba a la izquierda al lado de la imagen. sirve para que los elementos del texto se posicionen alrededor de la foto.*/
+}
+
+.principal p{
+    padding: 0 0 1em; /*1em es 1 x 15px osea 15px*/
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.mapa{
+    background: linear-gradient(white,lightgrey);
+    padding: 25px 0;
+}
+
+.mapa p{
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 25px 0;
+    background: linear-gradient(lightgrey,rgb(175, 174, 174));
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto; /*0 para arriba y abajo y automatico en laterales*/
+}
+
+.lista-diferenciales{
+    width: 40%;
+    /*esta lista y todas,por defecto viene en bloque (rectangular ancho hasta donde llega el texto en vertical, y largo llega a los bordes de la pantalla), pero le sacaremos el bloque para que pueda entrar la imagen en su linea vertical a la derecha y de esta forma el bloque solo ocupara la parte del texto y no toda la pantalla en horizontal. asi.
+    display: inline-block;*/
+    display: inline-block;
+    /*o dejamos el float: right; abajo (yo) o ponemos aca vertical-align: top; el profe dejo este*/
+}
+
+.items{
+    line-height: 1.5; /* 1.5 es el tamaño de la altura.*/
+}
+
+/*pseudo elemento que agrega un contenido antes de los elementos de html.*/
+.items:before{
+    content: "★";
+}
+
+/* con first child = primer hijo, le aplicaremos una funcion especial a la primera oracion del class items. podemos elegir segundo hijo o ultimo tambien.
+asi como tambien podemos usar .items:nth-child(3){
+    font-weight: bold;
+} donde seleccionamos el 3 hijo*/
+.items:first-child{
+    font-weight: bold;
+}
+
+.imagen-diferenciales{
+    width: 60%;
+    float: right;
+    margin: 0 0 2em 0;
+    /*la opacidad de la foto va de 
+    0 = no se ve nada, a 1 = que se ve normal por defecto
+    todos los elementos pueden recibir la opacidad.*/
+    opacity: 1;
+    /*con box-shadow hace sombra, 5px y 5p lo tira en 45 grados y solido xq tira 5 abajo y 5 derecha, y 5px 5px 5px hace un degradado, y con otro 5px hace mas grande la sombra. poniendo 5px 5px 30px va de solido a transparente.
+    esta sombra podemos agregarle a todos los elementos.
+
+    box-shadow: inset 0 0 30px red;
+    esta opcion me deja sombra en el interior del objeto.
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator*/
+    box-shadow: 15px 15px 30px black;
+}
+
+/*la etiqueta hover nos permite que al rozar la foto esta genere un efecto*/
+.imagen-diferenciales:hover{
+    opacity: 0.8;
+    /*con transition 100ms hara que haya una transicion de lo normal a opacidad de foto*/
+    transition: 400ms;
+}
+
+.video-principal{
+    padding: 25px 0;
+    background: linear-gradient(rgb(175, 174, 174),grey);
+}
+
+.video{
+    width: 940px;
+    margin: 2em auto;
+}
+
+/*con esta instruccion de mediaquery estamos diciendo que si se encuentra una pantalla con hasta 480px q es el limite maximo, aplicame un estilo visual en el body, su color x ej.
+es un recurso para agregar condiciones a formatos diferentes sin modificar nuestra pagina web vista desde la notebook.
+vamos a modificar dimensiones width de 940px por auto sobre las etiquetas de class que aplicamos arriba, y las vamos a agregar abajo por auto, para que se me ponga el ancho ordenadamente y para q se pueda ver en diferentes dispositivos mobiles de hasta 480px.
+de esta forma la pagina no se modifica al ver en una notebook, pero si en dispositivos mobiles de 480px de ancho.
+
+como tip: usar medidas proporcionales para todo. y crear un layout fluido que se adapte siempre.
+*/
+@media screen and (max-width:480px) {
+    h1{
+        text-align: center;
+    }/*con esto centramos el logo de arriba al centro*/
+
+    nav{
+        position: static;
+    }/*con esto bajamos abajo el home producto contacto abajo del logo cambiando de position:absolute a static*/
+
+    .utensiliosjpg {
+        width: 34%;
+        padding: 0px 15px 0px 18px;
+    }/*con esto ocupara un 32% la imagen y se vera mejor sobre la pantalla*/
+
+    .titulo-principal{
+        margin: 0 0px 15px;
+    }
+
+    .mapa{
+        padding: 30px 0;
+    }
+
+    .lista-diferenciales {
+        width: 100%
+    }/*con esto ocupara un 100% la lista y se leera mejor sobre la pantalla*/
+
+    .imagen-diferenciales {
+        margin: 15px 0 50px ;
+        width: 100%;
+    }/*con esto ocupara un 100% la imagen y se vera mejor sobre la pantalla.
+    y le di un poco de margen para que no este tan cerca la foto de la lista y q este un poco alejada del video de abajo*/
+
+    .caja, .principal-contenido, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }    
+
+    .productos, .contenido-contacto{
+        width: auto;
+    }
+    
+    .principal p {
+        padding: 0px 18px 1em;
+    }
+
+    .contenido-productos{
+        padding: 0 0;
+    }
+
+    .productos li {
+        width: 72%;
+        margin: 25px 13.5%; 
+    }
+
+    .contenido-contacto{
+        margin: 1px 27px;
+        padding: 40px 0px;
+    }
+
+    .enviar{
+        width: 96%;
+    }
+
+    .input-padron{
+        width: 79%;
+        padding: 8px 30px;
+    }
+}
+
+/*<p class="test" id="test" style="color: purple">Cómo le gustaría que lo contactemos?</p>
+la mayor jerarquia de etiqueta a la que se le da mas importancia es la que tomara el color de la letra, en este caso tenemos, etiqueta=1=p y form , class=10=.test, y etiqueta + class=1+10=p+.test, identificador = 100= #test y
+style="color: purple" = 1000
+
+osea 
+
+style="color:" > ID > CLASS > ETIQUETA
+
+osea purpura > green > orange > blue > red
+
+p{ /*vale 1 xq es etiqueta
+    color: red;
+}
+
+form p{ /*vale 1+1= 2 = form + p
+    color: blue;
+}
+
+.test{ /*vale 10 xq es class
+    color: orange;
+}
+
+p.test{ /*vale 11 xq es etiq=1 + class=10
+    color: green;
+}
+
+#test{ /*vale 100 xq es id
+    color: violet;
+}
+*/

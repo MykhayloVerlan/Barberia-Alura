@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"><!--con esta opcion adapta nuestra pagina a dispositivos como celular-->
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css"> 
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+                <!--la propiedad alt sirve para hacer una referencia a la foto que esta, esto es por si algun dev seguira esta trabajo y la foto se pierde-->
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barbería Alura"></h1> 
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <!-- cambie index.html x index2.html que es la mejorada -->
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="color-contacto">
+            <div class="contenido-contacto">
+                <form>
+                    <!--los type sirven para hacer referencia al llenado de una info para hacer la vida mas facil del usuario, esto es x ej type=tel al presionar ese campo aparecera el teclado numerico. o type=email aparecera el @. 
+
+                    a su vez label=etiqueta esta comunicada con input=entrada mediante el uso de un id y for que comparten mismo identificador.
+
+                    Required hace la funcion q si no llenamos ese campo al tocar enviar formulario nos dira llenar el campo obligatoriamente.
+
+                    Placeholder es la referencia q ponemos en el campo de como debe rellenarse ese campo.-->
+                    <label for="nombreapellido">Nombre y Apellido</label>
+                    <input type="text" id="nombreapellido" class="input-padron" required>
+    
+                    <label for="correoelectronico">Correo Electrónico</label>
+                    <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+    
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+                    
+                    <!--text area es un cuadro q permite escribir mucho texto ahi. cols y rows son columnas y filas con su tamaño-->
+                    <label for="Mensaje">Mensaje</label>
+                    <textarea cols="65" rows="10" id="mensaje" class="input-padron" required></textarea>
+                    
+                    <!-- fieldset = conjunto de campo. en esta opcion elegimos una de 3 opciones -->
+                    <fieldset>
+                        <legend>¿Cómo le gustaría que lo contactemos?</legend>
+
+                        <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+        
+                        <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>                  
+                        
+                        <!--por defecto va aparecer en la pagina el whatsapp ya seleccionado, eso lo definimos con checked. y a su vez mas abajo usamos el checked para tildar la opcion de que al usuario le gustaria recibir novedades. -->
+                        <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>                   
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="preferencia">¿En cuál horario prefiere ser atendido?</legend>
+                        <!--un seleccionador que desplega 3 opciones, mañana tarde o noche, esto es con select.--> 
+                        <select>
+                            <option>Mañana</option>
+                            <option>Tarde</option>
+                            <option>Noche</option>
+                        </select>
+
+                    </fieldset>
+                    <!--un checkbox un cuadro para tildar si quiero recibir novedades--> 
+                    <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+                    <!--un boton que diga enviar formulario de todo lo llenado en los campos y lo seleccionado.--> 
+                    <input type="submit" value="Enviar Formulario" class="enviar">
+                    
+                </form>
+
+                <!--etiqueta para tablas--> 
+                <table>
+                    <!--t=tabla y head=encabezado--> 
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+                    
+                    <!--t=tabla y body=cuerpo. tr=fila de tabla. td=columna de tabla--> 
+                    <tbody class="tabla">
+                        <tr>
+                            <td>Lunes</td>
+                            <td>8.00 Hs - 20.00 Hs</td>
+                        </tr>
+                        <tr>
+                            <td>Martes</td>
+                            <td>8.00 Hs - 20.00 Hs</td>
+                        </tr>
+                        <tr>
+                            <td>Miércoles</td>
+                            <td>8.00 Hs - 20.00 Hs</td>
+                        </tr>
+                        <tr>
+                            <td>Jueves</td>
+                            <td>8.00 Hs - 20.00 Hs</td>
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                            <td>8.00 Hs - 20.00 Hs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+            <!--el c de copyright lo descargamos de la pagina de unicode, ahi es de donde se deben sacar estos simbolos. emojis y demas etc.--> 
+            <p class="copyright">© Copyright Barbería Alura - 2020</p>
+        </footer>
+    </body>
+
+</html>
